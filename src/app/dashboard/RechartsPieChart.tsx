@@ -1,4 +1,3 @@
-// RechartsPieChart.tsx
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 

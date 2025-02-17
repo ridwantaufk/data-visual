@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/dashboard",
-        permanent: false, // Set to true for a permanent redirect (301)
+        permanent: false,
       },
     ];
   },

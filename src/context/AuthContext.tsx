@@ -17,7 +17,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<UserData | null>(null);
 
   const login = (data: UserData) => {
-    console.log("data : ", data);
+    // console.log("data : ", data);
     setUser(data); // Simpan data transaksi user dari API
   };
 
