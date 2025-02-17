@@ -45,7 +45,8 @@ const Login: React.FC = () => {
         "https://login-bir3msoyja-et.a.run.app",
         { username, password }
       );
-      console.log("Login successful:", response.data);
+      // console.log("API Response:", JSON.stringify(response.data));
+
       login(response.data);
 
       router.push("/dashboard");
@@ -76,13 +77,13 @@ const Login: React.FC = () => {
             isLightTheme ? "text-gray-900" : "text-white"
           }`}
         >
-          Login
+          Masuk
         </h1>
         <form onSubmit={handleSubmit} className="mt-6">
           <div className="relative">
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Masukkan Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className={`w-full p-3 ${
@@ -96,7 +97,7 @@ const Login: React.FC = () => {
           <div className="relative mt-4">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Masukkan Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={`w-full p-3 ${
@@ -121,14 +122,14 @@ const Login: React.FC = () => {
                 : "bg-blue-600 hover:bg-blue-700 active:scale-95 hover:shadow-xl text-white"
             }`}
           >
-            {loading ? "Logging in..." : "Login"}
+            {loading ? "Sedang masuk..." : "Masuk"}
           </button>
         </form>
         <button
           onClick={() => setIsLightTheme(!isLightTheme)}
           className="w-full mt-4 p-3 rounded-lg font-semibold shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-400 via-white to-purple-400 text-gray-900 hover:opacity-80"
         >
-          {isLightTheme ? "Switch to Dark Mode" : "Switch to Light Mode"}
+          {isLightTheme ? "Beralih ke Mode Gelap" : "Beralih ke Mode Terang"}
         </button>
       </div>
     </div>
